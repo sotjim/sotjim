@@ -11,10 +11,10 @@ bluetooth.onUartDataReceived(serial.delimiters(Delimiters.Hash), function () {
         wuKong.setAllMotor(20, 20)
     }
     if (Data == "r") {
-        wuKong.setAllMotor(0, 10)
+        wuKong.setAllMotor(-10, 10)
     }
     if (Data == "l") {
-        wuKong.setAllMotor(10, 0)
+        wuKong.setAllMotor(10, -10)
     }
     if (Data == "A") {
         wuKong.stopAllMotor()
