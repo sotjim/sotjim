@@ -6,12 +6,14 @@ bluetooth.onUartDataReceived(serial.delimiters(Delimiters.Hash), function () {
     basic.showString(Data)
     if (Data == "f") {
         wuKong.setAllMotor(-18, -18)
-    } else {
-        wuKong.stopAllMotor()
+    }
+    if (Data == "b") {
+        wuKong.setAllMotor(20, 20)
     }
 })
 let Data = ""
 bluetooth.startUartService()
+wuKong.stopAllMotor()
 basic.forever(function () {
 	
 })
